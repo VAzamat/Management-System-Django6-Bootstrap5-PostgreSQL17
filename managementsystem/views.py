@@ -5,5 +5,7 @@ from .models import Banner, GymActivity
 def home(request):
     banners = Banner.objects.filter(is_active=True)
     gymactivities = GymActivity.objects.filter(is_active=True)
-    return render(request, 'managementsystem/main.html',
-                  {'banners': banners, 'gymactivities':gymactivities})
+    return render(request,
+                  'managementsystem/main.html',
+                  {'banners': banners, 'gymactivities':gymactivities}
+                  )

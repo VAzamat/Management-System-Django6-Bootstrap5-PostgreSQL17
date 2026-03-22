@@ -139,49 +139,22 @@
 
     <!-- START THE FEATURETTES -->
 
+
+    {% for activity in gymactivities %}
     <hr class="featurette-divider">
 
     <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">Кардиотренировки</h2>
+      <div class="col-md-7 {% if forloop.counter|divisibleby:2 %}order-md-2{% endif %}">
+        <h2 class="featurette-heading">{{ activity.subtitle }}</h2>
         <p class="lead">
-        Кардио и аэробика — это неиссякаемая энергия в каждом движении. Твое сердце — мощный мотор, который требует закалки. Укрепи выносливость, сожги лишнее и почувствуй прилив жизненных сил. Будь в ритме своего здоровья!
+        {{ activity.description }}
         </p>
       </div>
-      <div class="col-md-5">
-        <img src="{% static 'images/Activities/001-CardioWoman.jpg' %}" alt="" width="500" />
-
+      <div class="col-md-5 {% if forloop.counter|divisibleby:2 %}order-md-1{% endif %}">
+        <img src="{{ activity.image.url }}" alt="{{ activity.title }}" width="500"  />
       </div>
     </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Координация <span class="text-muted">движений и ритм.</span></h2>
-        <p class="lead">
-        Бальные танцы — это совершенная координация движений и чистый драйв на паркете. Почувствуй ритм каждой клеткой, обрети грацию и уверенность. Наполни жизнь музыкой и страстью — начни танцевать прямо сейчас!
-        </p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img src="{% static 'images/Activities/002-Dance.jpg' %}" alt="" width="500" />
-
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">Работа<span class="text-muted"> над своим телом.</span></h2>
-        <p class="lead">
-        Бодибилдинг — это не просто мышцы, а триумф воли над ленью. Каждая тренировка кует характер и закаляет дух. Преврати боль в силу, а сомнения — в результат. Стань лучшей версией себя уже сегодня! Выбор за тобой.
-        </p>
-      </div>
-      <div class="col-md-5">
-        <img src="{% static 'images/Activities/003-AthleticMan.jpg' %}" alt="" width="500" />
-      </div>
-    </div>
+    {% endfor %}
 
     <hr class="featurette-divider">
 
