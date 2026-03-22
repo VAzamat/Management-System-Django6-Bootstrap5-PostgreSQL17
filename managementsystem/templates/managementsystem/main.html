@@ -124,7 +124,7 @@
             <h2 class="fw-normal mt-3">{{ activity.title }}</h2>
             <p>{{ activity.slogan }}</p>
             <p>
-                <a class="btn btn-secondary" href="{{ activity.link_url }}">
+                <a class="btn btn-secondary" href="#{{ activity.link_url }}">
                     Подробнее &raquo;
                 </a>
             </p>
@@ -144,7 +144,7 @@
     <hr class="featurette-divider">
 
     <div class="row featurette">
-      <div class="col-md-7 {% if forloop.counter|divisibleby:2 %}order-md-2{% endif %}">
+      <div id="{{ activity.link_url }}" class="col-md-7 {% if forloop.counter|divisibleby:2 %}order-md-2{% endif %}">
         <h2 class="featurette-heading">{{ activity.subtitle }}</h2>
         <p class="lead">
         {{ activity.description }}
