@@ -32,24 +32,6 @@
           font-size: 3.5rem;
         }
       }
-      .placeholder-bg-1 {
-      background-image: url("{% static 'images/ModernGym/001-training-yoga.jpg' %}");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      }
-      .placeholder-bg-2 {
-      background-image: url("{% static 'images/ModernGym/002-training-step-aerobic.jpg' %}");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      }
-      .placeholder-bg-3 {
-      background-image: url("{% static 'images/ModernGym/003-training-muscular-person.jpg' %}");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      }
     </style>
 
     
@@ -90,41 +72,23 @@
 
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      {% for banner in banners %}
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="{{forloop.counter0}}"  {% if forloop.first %}class="active"{% endif %} aria-current="true" aria-label="Slide {{forloop.counter}}"></button>
+     {% endfor %}
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active" style="background-image: url({% static 'images/ModernGym/001-training-yoga.jpg' %});">
-
+      {% for banner in banners %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}"
+        style="background-image: url('{{banner.image.url}}');background-repeat: no-repeat;      background-position: center center; background-size: cover;">
         <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Йога</h1>
-            <p>Приобретай душевный покой и умиротворение</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Присоединяйся к нам</a></p>
+          <div class="carousel-caption {% cycle 'text-start' '' 'text-end' %}">
+            <h1>{{banner.title}}</h1>
+            <p>{{banner.slogan}}</p>
+            <p><a class="btn btn-lg btn-primary" href="{{banner.link_url}}">{{banner.button_text}}</a></p>
           </div>
         </div>
       </div>
-      <div class="carousel-item" style="background-image: url({% static 'images/ModernGym/002-training-step-aerobic.jpg' %});">
-
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Интенсивные тренировки в группах</h1>
-            <p>Дай своему сердцу повод биться мощнее.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Узнай подробнее</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item" style="background-image: url({% static 'images/ModernGym/003-training-muscular-person.jpg' %});">
-
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>Зал силовых упражнений</h1>
-            <p>Построй себя сам, закаляя характер и тело.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Фотогалерея</a></p>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>

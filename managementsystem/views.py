@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Banner
 
 # Create your views here.
 def home(request):
-    return render(request, 'managementsystem/carousel.html')
+    banners = Banner.objects.filter(is_active=True)
+    return render(request, 'managementsystem/main.html', {'banners': banners})
