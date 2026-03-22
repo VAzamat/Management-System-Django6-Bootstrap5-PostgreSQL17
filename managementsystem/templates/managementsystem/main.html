@@ -108,35 +108,33 @@
   <div class="container marketing">
 
     <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <img src="{% static 'images/Activities/001-CardioWoman.jpg' %}" alt="" width="200" />
+    {% for activity in gymactivities %}
 
-        <h2>Кардиотренировки</h2>
-        <p>
-Дай своему сердцу повод биться мощнее.
-</p>
-        <p><a class="btn btn-secondary" href="#">Подробнее &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="{% static 'images/Activities/002-Dance.jpg' %}" alt="" width="200" />
+        {% if forloop.counter0|divisibleby:3 %}
+        <div class="row mb-4">
+        {% endif %}
 
-        <h2>Танцы</h2>
-        <p>
-Раскрой свою истинную красоту в танце.
-        </p>
-        <p><a class="btn btn-secondary" href="#">Подробнее  &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="{% static 'images/Activities/003-AthleticMan.jpg' %}" alt="" width="200" />
+        <div class="col-lg-4 text-center">
+                <img src="{{ activity.image.url }}"
+                     alt="{{ activity.title }}"
+                     width="200" height="200"
+                     class="rounded-circle"
+                     style="object-fit: cover;" />
 
-        <h2>Силовые упражнения</h2>
-        <p>
-        Построй себя сам, закаляя характер и тело.
-        </p>
-        <p><a class="btn btn-secondary" href="#">Подробнее &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
+            <h2 class="fw-normal mt-3">{{ activity.title }}</h2>
+            <p>{{ activity.slogan }}</p>
+            <p>
+                <a class="btn btn-secondary" href="{{ activity.link_url }}">
+                    Подробнее &raquo;
+                </a>
+            </p>
+        </div><!-- /.col-lg-4 -->
+
+        {% if forloop.counter|divisibleby:3 or forloop.last %}
+        </div><!-- /.row -->
+        {% endif %}
+
+    {% endfor %}
 
 
     <!-- START THE FEATURETTES -->
