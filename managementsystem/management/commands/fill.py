@@ -1,6 +1,6 @@
 
 from django.core.management import BaseCommand
-from managementsystem.models import Banner, GymActivity
+from managementsystem.models import Banner, GymActivity, PhotoAlbum, ImageGallery
 
 banners_data = [
     {
@@ -90,6 +90,9 @@ class Command(BaseCommand):
     def clear_databases(self):
         Banner.objects.all().delete()
         GymActivity.objects.all().delete()
+        PhotoAlbum.objects.all().delete()
+        ImageGallery.objects.all().delete()
+
 
 
     def handle_bulk_create(self, *args, **options):

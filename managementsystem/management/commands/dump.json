@@ -1,19 +1,7 @@
 [
 {
     "model": "managementsystem.banner",
-    "pk": "54fb8810-7490-4b42-a262-39c6bb6be309",
-    "fields": {
-        "title": "Интенсивные тренировки в группах",
-        "slogan": "Дай своему сердцу повод биться мощнее!",
-        "button_text": "Узнай подробнее",
-        "link_url": "activities",
-        "image": "images/banners/002-training-step-aerobic.jpg",
-        "is_active": true
-    }
-},
-{
-    "model": "managementsystem.banner",
-    "pk": "7185567a-1221-4c80-8cc9-e336f92c5922",
+    "pk": "36b33f00-3c6c-4b8f-821c-247054b567c5",
     "fields": {
         "title": "Зал силовых упражнений",
         "slogan": "Построй себя сам, закаляя характер и тело.",
@@ -25,7 +13,7 @@
 },
 {
     "model": "managementsystem.banner",
-    "pk": "8495da83-9c48-4edb-8e33-5e9204abfbcd",
+    "pk": "65412a01-d542-48ed-8b55-6fbf213e563a",
     "fields": {
         "title": "Йога",
         "slogan": "Приобретай душевный покой и умиротворение",
@@ -36,21 +24,20 @@
     }
 },
 {
-    "model": "managementsystem.gymactivity",
-    "pk": "193a0093-b6cc-4350-bb55-34bd869283b2",
+    "model": "managementsystem.banner",
+    "pk": "9b7a619e-8761-43a7-84f0-eb6c0091c86b",
     "fields": {
-        "title": "Бассейн",
-        "slogan": "Сила океана для твоих личных рекордов.",
-        "subtitle": "Бассейн",
-        "description": "Плавание в олимпийском 50-метровом бассейне — это максимум свободы для ваших достижений. Длинные дорожки позволяют держать темп без частых разворотов, развивая выносливость и силу. Укрепите спину и сбросьте лишнее в кристально чистой воде!",
-        "image": "images/GymActivities/004-Swimmingpool.jpg",
-        "link_url": "swimming",
+        "title": "Интенсивные тренировки в группах",
+        "slogan": "Дай своему сердцу повод биться мощнее!",
+        "button_text": "Узнай подробнее",
+        "link_url": "activities",
+        "image": "images/banners/002-training-step-aerobic.jpg",
         "is_active": true
     }
 },
 {
     "model": "managementsystem.gymactivity",
-    "pk": "46a1b1bd-f180-442f-95dd-74e95848337a",
+    "pk": "11b26f0d-5c0a-40e3-97fb-ddebe7890003",
     "fields": {
         "title": "Кардиотренировки",
         "slogan": "Дай своему сердцу повод биться мощнее.",
@@ -63,7 +50,33 @@
 },
 {
     "model": "managementsystem.gymactivity",
-    "pk": "4de74721-0974-4d49-9431-da3c8fe13612",
+    "pk": "2582f956-9499-478a-803b-f48ec20e9bbd",
+    "fields": {
+        "title": "Танцы",
+        "slogan": "Раскрой свою истинную красоту в танце.",
+        "subtitle": "Координация движений и ритм.",
+        "description": "Бальные танцы — это совершенная координация движений и чистый драйв на паркете. Почувствуй ритм каждой клеткой, обрети грацию и уверенность. Наполни жизнь музыкой и страстью — начни танцевать прямо сейчас!",
+        "image": "images/GymActivities/002-Dance.jpg",
+        "link_url": "dance",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.gymactivity",
+    "pk": "69fe1302-d1c2-4fe4-985d-707fb3fa5d8f",
+    "fields": {
+        "title": "Бассейн",
+        "slogan": "Сила океана для твоих личных рекордов.",
+        "subtitle": "Бассейн",
+        "description": "Плавание в олимпийском 50-метровом бассейне — это максимум свободы для ваших достижений. Длинные дорожки позволяют держать темп без частых разворотов, развивая выносливость и силу. Укрепите спину и сбросьте лишнее в кристально чистой воде!",
+        "image": "images/GymActivities/004-Swimmingpool.jpg",
+        "link_url": "swimming",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.gymactivity",
+    "pk": "99725fba-fd2d-4800-a243-8b10cbdb2002",
     "fields": {
         "title": "Единоборства",
         "slogan": "Используй энергию противника против него самого.",
@@ -76,7 +89,7 @@
 },
 {
     "model": "managementsystem.gymactivity",
-    "pk": "c90826db-ab45-48f9-a61d-f2be2a54bbb6",
+    "pk": "9c29bd2b-7411-467c-b97a-065aac3c19d3",
     "fields": {
         "title": "Силовые упражнения",
         "slogan": "Построй себя сам, закаляя характер и тело.",
@@ -88,15 +101,83 @@
     }
 },
 {
-    "model": "managementsystem.gymactivity",
-    "pk": "e476c7db-8715-4590-981e-2ee909007bc4",
+    "model": "managementsystem.photoalbum",
+    "pk": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
     "fields": {
-        "title": "Танцы",
-        "slogan": "Раскрой свою истинную красоту в танце.",
-        "subtitle": "Координация движений и ритм.",
-        "description": "Бальные танцы — это совершенная координация движений и чистый драйв на паркете. Почувствуй ритм каждой клеткой, обрети грацию и уверенность. Наполни жизнь музыкой и страстью — начни танцевать прямо сейчас!",
-        "image": "images/GymActivities/002-Dance.jpg",
-        "link_url": "dance",
+        "title": "Природа",
+        "cover_image": "images/PhotoAlbumCovers/001_collage_nature.jpg",
+        "description": "Прикоснитесь к магии первозданной природы: от заснеженных горных пиков и таинственного леса до танцующего в небе северного сияния. Альбом о тишине, величии природы и моментах, когда захватывает дух. Настоящая сказка в каждом кадре.",
+        "created_at": "2026-03-23T20:17:59.037Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "5f625584-b532-4e10-a377-88a40cd46966",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Горное озеро",
+        "image": "images/ImageGallery/004_nature_mountains.jpg",
+        "category": "горы",
+        "description": "Горное озеро — природный бриллиант в оправе из древних скал. Чистота воды, свежесть воздуха и покой, который можно найти только здесь. Идеальный пейзаж для тех, кто ищет вдохновение в тишине.",
+        "order": 1,
+        "created_at": "2026-03-23T20:47:33.112Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "674d63ca-1894-4b1d-b8e3-f1f964b2e9fb",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Северное сияние",
+        "image": "images/ImageGallery/003_nature_northern_lights.jpg",
+        "category": "полярные сияния",
+        "description": "Яркие всполохи северного сияния превращают ночь в сказку, отражаясь в снегах и напоминая о невероятной красоте нашей планеты. Красота, которую невозможно забыть.",
+        "order": 1,
+        "created_at": "2026-03-23T20:39:10.804Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "69fcdce4-155f-4f47-a71e-535715345441",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Уютная бухта",
+        "image": "images/ImageGallery/001_nature_5terre.jpg",
+        "category": "Море",
+        "description": "Вид с террасы на уютную бухту: разноцветные крыши домов и лодки на зеркальной глади. Идеальное утро в прибрежном раю, наполненное криком чаек и ароматом кофе. Здесь каждый уголок дышит спокойствием и летним теплом.",
+        "order": 3,
+        "created_at": "2026-03-23T20:45:39.366Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "92edc66b-7d50-41cb-b066-cb5b66284365",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Снежные вершины",
+        "image": "images/ImageGallery/005_nature_snow.jpg",
+        "category": "горы",
+        "description": "Величественные горные пики, укрытые сияющим снежным покровом, безмолвно застыли под холодным зимним солнцем. Атмосфера первозданной тишины и кристальной чистоты природы, где небо встречается с землей в бесконечном танце льда и света.",
+        "order": 0,
+        "created_at": "2026-03-23T20:36:50.226Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "cfa44418-0726-4426-b5f0-93ad438348e3",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Дорога в лес",
+        "image": "images/ImageGallery/002_nature_forest.jpg",
+        "category": "Лес",
+        "description": "Мост, ведущий в сердце дикого леса. Граница между суетой и спокойствием природы. Кажется, за этим поворотом начинается настоящая сказка. Идеальное место, чтобы оставить лишние мысли и просто идти вперед под шепот листвы.",
+        "order": 2,
+        "created_at": "2026-03-23T20:42:53.114Z",
         "is_active": true
     }
 }
