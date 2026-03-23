@@ -1,6 +1,8 @@
 from django.db import models
 import uuid
 
+from django.utils.safestring import mark_safe
+
 Nullable = {"null": True, "blank": True}
 
 class Banner(models.Model):
@@ -22,9 +24,9 @@ class Banner(models.Model):
         max_length=100,
         verbose_name="Текст кнопки"
     )
-    link_url = models.URLField(
-        max_length=500,
-        verbose_name="Ссылка перенаправления"
+    link_url = models.CharField(
+        max_length=50,
+        verbose_name="Выбираемая ссылка"
     )
     image = models.ImageField(
         upload_to='images/banners/',
@@ -42,6 +44,12 @@ class Banner(models.Model):
     def __str__(self):
         return self.title
 
+    def image_tag(self):
+        if self.image:
+            return mark_safe(f'<img src="{self.image.url}" height="100" style="object-fit:cover; border-radius:5px;"/>')
+        return "Нет изображения"
+
+    image_tag.short_description = 'Предпросмотр'
 
 class GymActivity(models.Model):
     id = models.UUIDField(
@@ -72,10 +80,9 @@ class GymActivity(models.Model):
         verbose_name="Изображение",
         **Nullable
     )
-    link_url = models.URLField(
-        max_length=500,
-        verbose_name="Ссылка на страницу",
-        **Nullable
+    link_url = models.CharField(
+        max_length=50,
+        verbose_name="Якорь - Ссылка перенаправления"
     )
     is_active = models.BooleanField(
         default=True,
@@ -88,4 +95,11 @@ class GymActivity(models.Model):
 
     def __str__(self):
         return self.title
+
+    def image_tag(self):
+        if self.image:
+            return mark_safe(f'<img src="{self.image.url}" height="100" style="object-fit:cover; border-radius:5px;"/>')
+        return "Нет изображения"
+
+    image_tag.short_description = 'Предпросмотр'
 
