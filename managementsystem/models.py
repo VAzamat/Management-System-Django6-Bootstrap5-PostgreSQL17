@@ -153,3 +153,62 @@ class PhotoAlbum(models.Model):
 
     image_tag.short_description = 'Предпросмотр'
 
+
+class ImageGallery(models.Model):
+    id = models.UUIDField(
+        primary_key=True,
+        default=uuid.uuid4,
+        editable=False,
+        verbose_name="ID для фото"
+    )
+    album = models.ForeignKey(
+        PhotoAlbum,
+        on_delete=models.CASCADE,
+        related_name='photos',
+        verbose_name="Альбом"
+    )
+    title = models.CharField(
+        max_length=200,
+        verbose_name="Заголовок фото"
+    )
+    image = models.ImageField(
+        upload_to='images/ImageGallery/',
+        verbose_name="Фотография"
+    )
+    category = models.CharField(
+        max_length=100,
+        verbose_name="Категория/Тег",
+        **Nullable
+    )
+    description = models.TextField(
+        verbose_name="Описание",
+        **Nullable
+    )
+    order = models.PositiveIntegerField(
+        default=0,
+        verbose_name="Порядок вывода"
+    )
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name="Дата загрузки"
+    )
+    is_active = models.BooleanField(
+        default=True,
+        verbose_name="Отображать в галерее"
+    )
+
+    class Meta:
+        verbose_name = "Фото галереи"
+        verbose_name_plural = "Галерея изображений"
+        ordering = ['order', '-created_at']  # Сначала по порядку, потом по новизне
+
+    def __str__(self):
+        return f"Фото - {self.title}"
+
+    def image_tag(self):
+        if self.image:
+            return mark_safe(f'<img src="{self.image.url}" height="100" style="object-fit:cover; border-radius:5px;"/>')
+        return "Нет изображения"
+
+    image_tag.short_description = 'Предпросмотр'
+

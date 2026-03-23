@@ -22,3 +22,7 @@ class PhotoAlbumAdmin(admin.ModelAdmin):
     list_filter = ('is_active',)
     readonly_fields = ('image_tag',)
 
+@admin.register(ImageGallery)
+class ImageGalleryAdmin(admin.ModelAdmin):
+    list_display = ('title', 'image_tag', 'is_active', 'album')
+    list_filter = ('is_active',)
