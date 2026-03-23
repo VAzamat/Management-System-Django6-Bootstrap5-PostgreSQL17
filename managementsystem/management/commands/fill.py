@@ -10,7 +10,16 @@ photoalbom_data=[
         "description": "Прикоснитесь к магии первозданной природы: от заснеженных горных пиков и таинственного леса до танцующего в небе северного сияния. Альбом о тишине, величии природы и моментах, когда захватывает дух. Настоящая сказка в каждом кадре.",
         "created_at": "2026-03-23T20:17:59.037Z",
         "is_active": True
+    },
+    {
+        "pk": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+        "title": "Наши работники",
+        "cover_image": "images/PhotoAlbumCovers/002_cover_collage_team.jpg",
+        "description": "Наша команда это эксперты с многолетним опытом, влюбленные в свое дело. Мы объединили лучших мастеров, чтобы гарантировать вам безупречное качество, индивидуальный подход и соблюдение сроков. Ваше доверие — наш главный стимул к совершенству!",
+        "created_at": "2026-03-23T21:58:00.698Z",
+        "is_active": True
     }
+
 ]
 
 imagegallery_data=[
@@ -24,7 +33,7 @@ imagegallery_data=[
         "created_at": "2026-03-23T20:47:33.112Z",
         "is_active": True
     },
-{
+    {
         "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
         "title": "Северное сияние",
         "image": "images/ImageGallery/003_nature_northern_lights.jpg",
@@ -34,7 +43,7 @@ imagegallery_data=[
         "created_at": "2026-03-23T20:39:10.804Z",
         "is_active": True
     },
-{
+    {
         "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
         "title": "Уютная бухта",
         "image": "images/ImageGallery/001_nature_5terre.jpg",
@@ -44,7 +53,7 @@ imagegallery_data=[
         "created_at": "2026-03-23T20:45:39.366Z",
         "is_active": True
     },
-{
+    {
         "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
         "title": "Снежные вершины",
         "image": "images/ImageGallery/005_nature_snow.jpg",
@@ -63,7 +72,48 @@ imagegallery_data=[
         "order": 2,
         "created_at": "2026-03-23T20:42:53.114Z",
         "is_active": True
+    },
+    {
+        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+        "title": "Anna Doe",
+        "image": "images/ImageGallery/001_team_AnnaDoe.jpg",
+        "category": "Работники",
+        "description": "Anna Doe — ведущий дизайнер нашей команды. Обладает тонким чувством стиля и уникальным взглядом на пространство. Анна создает эстетичные и функциональные интерьеры тренажерных залов, в которых продумана каждая деталь. Её проекты — это гармония уюта и современных трендов.",
+        "order": 0,
+        "created_at": "2026-03-23T22:00:01.950Z",
+        "is_active": True
+    },
+    {
+        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+        "title": "Katrin King",
+        "image": "images/ImageGallery/004_team_KatrinKing.jpg",
+        "category": "Работники",
+        "description": "Katrin King — мудрая душа и совладелица нашей сети. Её жизненный опыт и верность традициям лежат в основе нашего гостеприимства. Катрин следит за тем, чтобы в каждом клубе сохранялась уютная атмосфера и семейные ценности, ставшие фундаментом бизнеса.",
+        "order": 2,
+        "created_at": "2026-03-23T22:03:52.429Z",
+        "is_active": True
+    },
+    {
+        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+        "title": "Eva Berg",
+        "image": "images/ImageGallery/005_team_EvaBerg.jpg",
+        "category": "Работники",
+        "description": "Eva Berg — наш легендарный ведущий тренер, чьё присутствие ощущается в каждом результате, даже если её нет в зале. Она — дух нашей дисциплины и автор уникальных программ. Ева учит преодолевать границы возможного и находить гармонию в движении.",
+        "order": 5,
+        "created_at": "2026-03-23T22:05:03.991Z",
+        "is_active": True
+    },
+    {
+        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+        "title": "John Doe",
+        "image": "images/ImageGallery/003_team_JohnDoe.jpg",
+        "category": "Работники",
+        "description": "John Doe — идейный вдохновитель и создатель нашей сети фитнес-центров. Сделал миссией своей жизни развитие доступного и профессионального спорта. Благодаря его опыту и видению, наши клубы стали эталоном качества, комфорта и здорового образа жизни.",
+        "order": 2,
+        "created_at": "2026-03-23T22:02:33.758Z",
+        "is_active": True
     }
+
 ]
 
 banners_data = [

@@ -1,19 +1,7 @@
 [
 {
     "model": "managementsystem.banner",
-    "pk": "36b33f00-3c6c-4b8f-821c-247054b567c5",
-    "fields": {
-        "title": "Зал силовых упражнений",
-        "slogan": "Построй себя сам, закаляя характер и тело.",
-        "button_text": "Фотогалерея",
-        "link_url": "photogallery",
-        "image": "images/banners/003-training-muscular-person.jpg",
-        "is_active": true
-    }
-},
-{
-    "model": "managementsystem.banner",
-    "pk": "65412a01-d542-48ed-8b55-6fbf213e563a",
+    "pk": "0618a9e8-86e0-4096-8fdf-89bcfc76ccb7",
     "fields": {
         "title": "Йога",
         "slogan": "Приобретай душевный покой и умиротворение",
@@ -25,7 +13,19 @@
 },
 {
     "model": "managementsystem.banner",
-    "pk": "9b7a619e-8761-43a7-84f0-eb6c0091c86b",
+    "pk": "247fb387-2ef5-4e08-b611-b61b9c084e7c",
+    "fields": {
+        "title": "Зал силовых упражнений",
+        "slogan": "Построй себя сам, закаляя характер и тело.",
+        "button_text": "Фотогалерея",
+        "link_url": "photogallery",
+        "image": "images/banners/003-training-muscular-person.jpg",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.banner",
+    "pk": "4e5a7280-e3c0-4c80-be14-8caa08a9a9a4",
     "fields": {
         "title": "Интенсивные тренировки в группах",
         "slogan": "Дай своему сердцу повод биться мощнее!",
@@ -37,33 +37,7 @@
 },
 {
     "model": "managementsystem.gymactivity",
-    "pk": "11b26f0d-5c0a-40e3-97fb-ddebe7890003",
-    "fields": {
-        "title": "Кардиотренировки",
-        "slogan": "Дай своему сердцу повод биться мощнее.",
-        "subtitle": "Кардиотренировки",
-        "description": "Кардио и аэробика — это неиссякаемая энергия в каждом движении. Твое сердце — мощный мотор, который требует закалки. Укрепи выносливость, сожги лишнее и почувствуй прилив жизненных сил. Будь в ритме своего здоровья!",
-        "image": "images/GymActivities/001-CardioWoman.jpg",
-        "link_url": "cardio",
-        "is_active": true
-    }
-},
-{
-    "model": "managementsystem.gymactivity",
-    "pk": "2582f956-9499-478a-803b-f48ec20e9bbd",
-    "fields": {
-        "title": "Танцы",
-        "slogan": "Раскрой свою истинную красоту в танце.",
-        "subtitle": "Координация движений и ритм.",
-        "description": "Бальные танцы — это совершенная координация движений и чистый драйв на паркете. Почувствуй ритм каждой клеткой, обрети грацию и уверенность. Наполни жизнь музыкой и страстью — начни танцевать прямо сейчас!",
-        "image": "images/GymActivities/002-Dance.jpg",
-        "link_url": "dance",
-        "is_active": true
-    }
-},
-{
-    "model": "managementsystem.gymactivity",
-    "pk": "69fe1302-d1c2-4fe4-985d-707fb3fa5d8f",
+    "pk": "25769639-5c47-4082-9807-3e81a971fe87",
     "fields": {
         "title": "Бассейн",
         "slogan": "Сила океана для твоих личных рекордов.",
@@ -76,7 +50,7 @@
 },
 {
     "model": "managementsystem.gymactivity",
-    "pk": "99725fba-fd2d-4800-a243-8b10cbdb2002",
+    "pk": "51eea0fc-5a9a-4eaf-845b-459eec14c86c",
     "fields": {
         "title": "Единоборства",
         "slogan": "Используй энергию противника против него самого.",
@@ -89,7 +63,7 @@
 },
 {
     "model": "managementsystem.gymactivity",
-    "pk": "9c29bd2b-7411-467c-b97a-065aac3c19d3",
+    "pk": "94b2a3af-562d-4193-b79b-f895467038a1",
     "fields": {
         "title": "Силовые упражнения",
         "slogan": "Построй себя сам, закаляя характер и тело.",
@@ -101,19 +75,56 @@
     }
 },
 {
+    "model": "managementsystem.gymactivity",
+    "pk": "dde31b4a-a0ed-49a1-9b5d-7a12920c213d",
+    "fields": {
+        "title": "Кардиотренировки",
+        "slogan": "Дай своему сердцу повод биться мощнее.",
+        "subtitle": "Кардиотренировки",
+        "description": "Кардио и аэробика — это неиссякаемая энергия в каждом движении. Твое сердце — мощный мотор, который требует закалки. Укрепи выносливость, сожги лишнее и почувствуй прилив жизненных сил. Будь в ритме своего здоровья!",
+        "image": "images/GymActivities/001-CardioWoman.jpg",
+        "link_url": "cardio",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.gymactivity",
+    "pk": "f7775125-9970-4885-ad9a-edccae8f038d",
+    "fields": {
+        "title": "Танцы",
+        "slogan": "Раскрой свою истинную красоту в танце.",
+        "subtitle": "Координация движений и ритм.",
+        "description": "Бальные танцы — это совершенная координация движений и чистый драйв на паркете. Почувствуй ритм каждой клеткой, обрети грацию и уверенность. Наполни жизнь музыкой и страстью — начни танцевать прямо сейчас!",
+        "image": "images/GymActivities/002-Dance.jpg",
+        "link_url": "dance",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.photoalbum",
+    "pk": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+    "fields": {
+        "title": "Наши работники",
+        "cover_image": "images/PhotoAlbumCovers/002_cover_collage_team.jpg",
+        "description": "Наша команда это эксперты с многолетним опытом, влюбленные в свое дело. Мы объединили лучших мастеров, чтобы гарантировать вам безупречное качество, индивидуальный подход и соблюдение сроков. Ваше доверие — наш главный стимул к совершенству!",
+        "created_at": "2026-03-23T21:58:00.698Z",
+        "is_active": true
+    }
+},
+{
     "model": "managementsystem.photoalbum",
     "pk": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
     "fields": {
         "title": "Природа",
         "cover_image": "images/PhotoAlbumCovers/001_collage_nature.jpg",
         "description": "Прикоснитесь к магии первозданной природы: от заснеженных горных пиков и таинственного леса до танцующего в небе северного сияния. Альбом о тишине, величии природы и моментах, когда захватывает дух. Настоящая сказка в каждом кадре.",
-        "created_at": "2026-03-23T20:17:59.037Z",
+        "created_at": "2026-03-23T21:14:57.698Z",
         "is_active": true
     }
 },
 {
     "model": "managementsystem.imagegallery",
-    "pk": "5f625584-b532-4e10-a377-88a40cd46966",
+    "pk": "489eea29-f6a3-42fa-a9b2-956e1c58b989",
     "fields": {
         "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
         "title": "Горное озеро",
@@ -121,55 +132,13 @@
         "category": "горы",
         "description": "Горное озеро — природный бриллиант в оправе из древних скал. Чистота воды, свежесть воздуха и покой, который можно найти только здесь. Идеальный пейзаж для тех, кто ищет вдохновение в тишине.",
         "order": 1,
-        "created_at": "2026-03-23T20:47:33.112Z",
+        "created_at": "2026-03-23T21:14:57.703Z",
         "is_active": true
     }
 },
 {
     "model": "managementsystem.imagegallery",
-    "pk": "674d63ca-1894-4b1d-b8e3-f1f964b2e9fb",
-    "fields": {
-        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
-        "title": "Северное сияние",
-        "image": "images/ImageGallery/003_nature_northern_lights.jpg",
-        "category": "полярные сияния",
-        "description": "Яркие всполохи северного сияния превращают ночь в сказку, отражаясь в снегах и напоминая о невероятной красоте нашей планеты. Красота, которую невозможно забыть.",
-        "order": 1,
-        "created_at": "2026-03-23T20:39:10.804Z",
-        "is_active": true
-    }
-},
-{
-    "model": "managementsystem.imagegallery",
-    "pk": "69fcdce4-155f-4f47-a71e-535715345441",
-    "fields": {
-        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
-        "title": "Уютная бухта",
-        "image": "images/ImageGallery/001_nature_5terre.jpg",
-        "category": "Море",
-        "description": "Вид с террасы на уютную бухту: разноцветные крыши домов и лодки на зеркальной глади. Идеальное утро в прибрежном раю, наполненное криком чаек и ароматом кофе. Здесь каждый уголок дышит спокойствием и летним теплом.",
-        "order": 3,
-        "created_at": "2026-03-23T20:45:39.366Z",
-        "is_active": true
-    }
-},
-{
-    "model": "managementsystem.imagegallery",
-    "pk": "92edc66b-7d50-41cb-b066-cb5b66284365",
-    "fields": {
-        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
-        "title": "Снежные вершины",
-        "image": "images/ImageGallery/005_nature_snow.jpg",
-        "category": "горы",
-        "description": "Величественные горные пики, укрытые сияющим снежным покровом, безмолвно застыли под холодным зимним солнцем. Атмосфера первозданной тишины и кристальной чистоты природы, где небо встречается с землей в бесконечном танце льда и света.",
-        "order": 0,
-        "created_at": "2026-03-23T20:36:50.226Z",
-        "is_active": true
-    }
-},
-{
-    "model": "managementsystem.imagegallery",
-    "pk": "cfa44418-0726-4426-b5f0-93ad438348e3",
+    "pk": "64378a40-0111-4491-9545-f7f42fb37b0d",
     "fields": {
         "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
         "title": "Дорога в лес",
@@ -177,7 +146,119 @@
         "category": "Лес",
         "description": "Мост, ведущий в сердце дикого леса. Граница между суетой и спокойствием природы. Кажется, за этим поворотом начинается настоящая сказка. Идеальное место, чтобы оставить лишние мысли и просто идти вперед под шепот листвы.",
         "order": 2,
-        "created_at": "2026-03-23T20:42:53.114Z",
+        "created_at": "2026-03-23T21:14:57.703Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "660e5a1d-3ae3-4399-bdf2-15a12acbddcf",
+    "fields": {
+        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+        "title": "Anna Doe",
+        "image": "images/ImageGallery/001_team_AnnaDoe.jpg",
+        "category": "Работники",
+        "description": "Anna Doe — ведущий дизайнер нашей команды. Обладает тонким чувством стиля и уникальным взглядом на пространство. Анна создает эстетичные и функциональные интерьеры тренажерных залов, в которых продумана каждая деталь. Её проекты — это гармония уюта и современных трендов.",
+        "order": 0,
+        "created_at": "2026-03-23T22:00:01.950Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "668f6b46-51dc-4a64-bfb7-43e16b5bac3f",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Северное сияние",
+        "image": "images/ImageGallery/003_nature_northern_lights.jpg",
+        "category": "полярные сияния",
+        "description": "Яркие всполохи северного сияния превращают ночь в сказку, отражаясь в снегах и напоминая о невероятной красоте нашей планеты. Красота, которую невозможно забыть.",
+        "order": 1,
+        "created_at": "2026-03-23T21:14:57.703Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "83254eb5-9604-4bdf-91e2-cacf7ec72f44",
+    "fields": {
+        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+        "title": "Katrin King",
+        "image": "images/ImageGallery/004_team_KatrinKing.jpg",
+        "category": "Работники",
+        "description": "Katrin King — мудрая душа и совладелица нашей сети. Её жизненный опыт и верность традициям лежат в основе нашего гостеприимства. Катрин следит за тем, чтобы в каждом клубе сохранялась уютная атмосфера и семейные ценности, ставшие фундаментом бизнеса.",
+        "order": 2,
+        "created_at": "2026-03-23T22:03:52.429Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "9f73b928-1681-4e3c-87e4-ac58b0b43e9a",
+    "fields": {
+        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+        "title": "Eva Berg",
+        "image": "images/ImageGallery/005_team_EvaBerg.jpg",
+        "category": "Работники",
+        "description": "Eva Berg — наш легендарный ведущий тренер, чьё присутствие ощущается в каждом результате, даже если её нет в зале. Она — дух нашей дисциплины и автор уникальных программ. Ева учит преодолевать границы возможного и находить гармонию в движении.",
+        "order": 5,
+        "created_at": "2026-03-23T22:05:03.991Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "bcf14386-2264-41ab-9f06-ef9c07c5f60b",
+    "fields": {
+        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+        "title": "John Doe",
+        "image": "images/ImageGallery/003_team_JohnDoe.jpg",
+        "category": "Работники",
+        "description": "John Doe — идейный вдохновитель и создатель нашей сети фитнес-центров. Сделал миссией своей жизни развитие доступного и профессионального спорта. Благодаря его опыту и видению, наши клубы стали эталоном качества, комфорта и здорового образа жизни.",
+        "order": 2,
+        "created_at": "2026-03-23T22:02:33.758Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "e8c1ebd3-7975-4fdc-ab2c-4fa3bab514cf",
+    "fields": {
+        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+        "title": "Mike Ross",
+        "image": "images/ImageGallery/002_team_MikeRoss.jpg",
+        "category": "Работники",
+        "description": "Mike Ross — мастер динамичных кадров и безупречной логистики. Как организатор и фотограф, он видит спорт изнутри: ловит драйв соревнований и создаёт события, продуманные до мелочей. С Майком каждое мероприятие превращается в яркую историю побед.",
+        "order": 1,
+        "created_at": "2026-03-23T22:01:26.602Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "f1397bb1-7fdc-4144-9b08-3f129e5bdf13",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Уютная бухта",
+        "image": "images/ImageGallery/001_nature_5terre.jpg",
+        "category": "Море",
+        "description": "Вид с террасы на уютную бухту: разноцветные крыши домов и лодки на зеркальной глади. Идеальное утро в прибрежном раю, наполненное криком чаек и ароматом кофе. Здесь каждый уголок дышит спокойствием и летним теплом.",
+        "order": 3,
+        "created_at": "2026-03-23T21:14:57.703Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "f3033c18-959e-4dc5-9651-47fb4c0c66db",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Снежные вершины",
+        "image": "images/ImageGallery/005_nature_snow.jpg",
+        "category": "горы",
+        "description": "Величественные горные пики, укрытые сияющим снежным покровом, безмолвно застыли под холодным зимним солнцем. Атмосфера первозданной тишины и кристальной чистоты природы, где небо встречается с землей в бесконечном танце льда и света.",
+        "order": 0,
+        "created_at": "2026-03-23T21:14:57.703Z",
         "is_active": true
     }
 }
