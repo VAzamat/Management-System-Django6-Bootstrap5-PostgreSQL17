@@ -2,6 +2,70 @@
 from django.core.management import BaseCommand
 from managementsystem.models import Banner, GymActivity, PhotoAlbum, ImageGallery
 
+photoalbom_data=[
+    {
+        "pk": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Природа",
+        "cover_image": "images/PhotoAlbumCovers/001_collage_nature.jpg",
+        "description": "Прикоснитесь к магии первозданной природы: от заснеженных горных пиков и таинственного леса до танцующего в небе северного сияния. Альбом о тишине, величии природы и моментах, когда захватывает дух. Настоящая сказка в каждом кадре.",
+        "created_at": "2026-03-23T20:17:59.037Z",
+        "is_active": True
+    }
+]
+
+imagegallery_data=[
+    {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Горное озеро",
+        "image": "images/ImageGallery/004_nature_mountains.jpg",
+        "category": "горы",
+        "description": "Горное озеро — природный бриллиант в оправе из древних скал. Чистота воды, свежесть воздуха и покой, который можно найти только здесь. Идеальный пейзаж для тех, кто ищет вдохновение в тишине.",
+        "order": 1,
+        "created_at": "2026-03-23T20:47:33.112Z",
+        "is_active": True
+    },
+{
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Северное сияние",
+        "image": "images/ImageGallery/003_nature_northern_lights.jpg",
+        "category": "полярные сияния",
+        "description": "Яркие всполохи северного сияния превращают ночь в сказку, отражаясь в снегах и напоминая о невероятной красоте нашей планеты. Красота, которую невозможно забыть.",
+        "order": 1,
+        "created_at": "2026-03-23T20:39:10.804Z",
+        "is_active": True
+    },
+{
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Уютная бухта",
+        "image": "images/ImageGallery/001_nature_5terre.jpg",
+        "category": "Море",
+        "description": "Вид с террасы на уютную бухту: разноцветные крыши домов и лодки на зеркальной глади. Идеальное утро в прибрежном раю, наполненное криком чаек и ароматом кофе. Здесь каждый уголок дышит спокойствием и летним теплом.",
+        "order": 3,
+        "created_at": "2026-03-23T20:45:39.366Z",
+        "is_active": True
+    },
+{
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Снежные вершины",
+        "image": "images/ImageGallery/005_nature_snow.jpg",
+        "category": "горы",
+        "description": "Величественные горные пики, укрытые сияющим снежным покровом, безмолвно застыли под холодным зимним солнцем. Атмосфера первозданной тишины и кристальной чистоты природы, где небо встречается с землей в бесконечном танце льда и света.",
+        "order": 0,
+        "created_at": "2026-03-23T20:36:50.226Z",
+        "is_active": True
+    },
+    {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Дорога в лес",
+        "image": "images/ImageGallery/002_nature_forest.jpg",
+        "category": "Лес",
+        "description": "Мост, ведущий в сердце дикого леса. Граница между суетой и спокойствием природы. Кажется, за этим поворотом начинается настоящая сказка. Идеальное место, чтобы оставить лишние мысли и просто идти вперед под шепот листвы.",
+        "order": 2,
+        "created_at": "2026-03-23T20:42:53.114Z",
+        "is_active": True
+    }
+]
+
 banners_data = [
     {
         "title": "Йога",
@@ -111,3 +175,14 @@ class Command(BaseCommand):
             objects_for_creation.append(GymActivity(**object_item))
         GymActivity.objects.bulk_create(objects_for_creation)
 
+        objects_for_creation = []
+        for object_item in photoalbom_data:
+            objects_for_creation.append(PhotoAlbum(**object_item))
+        PhotoAlbum.objects.bulk_create(objects_for_creation)
+
+        objects_for_creation = []
+        for object_item in imagegallery_data:
+            id = object_item['album']
+            object_item['album'] = PhotoAlbum.objects.get(id=id)
+            objects_for_creation.append(ImageGallery(**object_item))
+        ImageGallery.objects.bulk_create(objects_for_creation)
