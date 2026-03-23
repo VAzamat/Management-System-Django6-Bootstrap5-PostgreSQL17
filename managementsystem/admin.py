@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Banner, GymActivity
+from .models import Banner, GymActivity, PhotoAlbum, ImageGallery
+
 
 #admin.site.register(Banner)
 @admin.register(Banner)
@@ -13,3 +14,11 @@ class GymActivityAdmin(admin.ModelAdmin):
     list_display = ('title', 'image_tag', 'is_active')
     list_filter = ('is_active',)
     readonly_fields = ('image_tag',)
+
+
+@admin.register(PhotoAlbum)
+class PhotoAlbumAdmin(admin.ModelAdmin):
+    list_display = ('title', 'image_tag', 'is_active')
+    list_filter = ('is_active',)
+    readonly_fields = ('image_tag',)
+

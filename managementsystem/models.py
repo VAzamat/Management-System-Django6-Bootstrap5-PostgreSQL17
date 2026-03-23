@@ -103,3 +103,53 @@ class GymActivity(models.Model):
 
     image_tag.short_description = 'Предпросмотр'
 
+
+class PhotoAlbum(models.Model):
+    id = models.UUIDField(
+        primary_key=True,
+        default=uuid.uuid4,
+        editable=False,
+        verbose_name="Уникальный ID"
+    )
+
+    title = models.CharField(
+        max_length=255,
+        verbose_name="Название альбома"
+    )
+
+    cover_image = models.ImageField(
+        upload_to='images/PhotoAlbumCovers/',
+        verbose_name="Обложка альбома",
+        **Nullable
+    )
+
+    description = models.TextField(
+        verbose_name="Описание события",
+        **Nullable
+    )
+
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name="Дата создания"
+    )
+
+    is_active = models.BooleanField(
+        default=True,
+        verbose_name="Отображать на сайте"
+    )
+
+    class Meta:
+        verbose_name = "Фотоальбом"
+        verbose_name_plural = "Фотоальбомы"
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"Альбом - {self.title}"
+
+    def image_tag(self):
+        if self.cover_image:
+            return mark_safe(f'<img src="{self.cover_image.url}" height="100" style="object-fit:cover; border-radius:5px;"/>')
+        return "Нет изображения"
+
+    image_tag.short_description = 'Предпросмотр'
+
