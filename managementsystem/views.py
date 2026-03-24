@@ -16,7 +16,8 @@ def photoalbums(request):
     photoalbums = PhotoAlbum.objects.filter(is_active=True)
     return render(request, 'managementsystem/photoalbums.html',{'photoalbums':photoalbums})
 
-def photoalbum_details(request, pk):
-    photoalbum = get_object_or_404(PhotoAlbum, pk=pk)
-    return render(request, 'managementsystem/photoalbums.html',{'photoalbum':photoalbum})
+def photoalbum_detail(request, pk):
+    album = get_object_or_404(PhotoAlbum.objects.prefetch_related('photos'), pk=pk)
+    images=album.photos.all()
+    return render(request, 'managementsystem/photoalbum_detail.html',{'album':album,'images':images})
 

@@ -76,14 +76,15 @@
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
   <div class="container marketing">
+
     <div class="row mb-12">
         <div class="col-lg-12 text-center">
-            <h2 class="fw-normal mt-3">Фотогалерея</h2>
+            <h2 class="fw-normal mt-3">{{ album.title }}</h2>
         </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->
 
     <!-- Three columns of text below the carousel -->
-    {% for photoalbum in photoalbums %}
+    {% for image in images %}
 
         {% if forloop.counter0|divisibleby:3 %}
         <div class="row mb-4">
@@ -91,14 +92,12 @@
 
 
 
-        <div class="col-lg-4 text-start">
-          <a href="{% url 'managementsystem:photoalbum_detail' photoalbum.pk %}">
-                <img src="{{ photoalbum.cover_image.url }}" alt="{{ photoalbum.title }}" width="400" />
+        <div class="col-lg-4 text-center">
+                <img src="{{ image.image.url }}" alt="{{ image.title }}" width="400"/>
+            <h4 class="fw-normal mt-3">{{ image.title }}</h4>
 
-            <h4 class="fw-normal mt-3">{{ photoalbum.title }}</h4>
-          </a>
-            <p>{{ photoalbum.description }}</p>
-            <p>Создан: {{ photoalbum.created_at|date:"d.m.Y  H:i" }}</p>
+            <p>{{ image.description }}</p>
+            <p>Создан: {{ image.created_at|date:"d.m.Y  H:i" }}</p>
 
         </div><!-- /.col-lg-4 -->
 
@@ -110,13 +109,12 @@
     {% endfor %}
 
 
-
   </div><!-- /.container -->
 
 
   <!-- FOOTER -->
   <footer class="container">
-    <p class="float-end"><a href="#">Вверх</a></p>
+    <p class="float-end"><a href="{% url 'managementsystem:photoalbums' %}">В фотогалерею</a></p>
     <p>&copy; 2017–2026 Studio360, Inc. &middot; <a href="#">Обратная связь</a> &middot; <a href="#">Условия использования</a></p>
   </footer>
 </main>
