@@ -18,6 +18,6 @@ def photoalbums(request):
 
 def photoalbum_detail(request, pk):
     album = get_object_or_404(PhotoAlbum.objects.prefetch_related('photos'), pk=pk)
-    images=album.photos.all()
+    images=album.photos.filter(is_active=True).order_by('order', 'created_at')
     return render(request, 'managementsystem/photoalbum_detail.html',{'album':album,'images':images})
 
