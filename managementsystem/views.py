@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Banner, GymActivity
+from .models import Banner, GymActivity, PhotoAlbum
 import random
 
 # Create your views here.
@@ -12,3 +12,7 @@ def home(request):
                   'managementsystem/main.html',
                   {'banners': banners, 'gymactivities':gymactivities, 'gymactivities_random': gymactivities_random}
                   )
+
+def photoalbums(request):
+    photoalbums = PhotoAlbum.objects.filter(is_active=True)
+    return render(request,'photoalbums.html',{'photoalbums':photoalbums})
