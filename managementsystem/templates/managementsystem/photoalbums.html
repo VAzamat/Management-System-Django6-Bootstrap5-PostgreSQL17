@@ -98,7 +98,7 @@
             <h4 class="fw-normal mt-3">{{ photoalbum.title }}</h4>
           </a>
             <p>{{ photoalbum.description }}</p>
-            <p>Создан: {{ photoalbum.created_at|date:"d.m.Y  H:i" }}</p>
+            <p>Дата создания: {{ photoalbum.created_at|date:"d.m.Y  H:i" }}</p>
 
         </div><!-- /.col-lg-4 -->
 
@@ -116,7 +116,7 @@
 
   <!-- FOOTER -->
   <footer class="container">
-    <p class="float-end"><a href="#">Вверх</a></p>
+    <p class="float-end"><a href="{% url 'managementsystem:home' %}">На главную</a></p>
     <p>&copy; 2017–2026 Studio360, Inc. &middot; <a href="#">Обратная связь</a> &middot; <a href="#">Условия использования</a></p>
   </footer>
 </main>
