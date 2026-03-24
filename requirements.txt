@@ -2,3 +2,4 @@ Django==6.0.3
 ipython==9.11.0
 pillow==12.1.1
 psycopg2-binary==2.9.11
+django-unfold==0.86.1
