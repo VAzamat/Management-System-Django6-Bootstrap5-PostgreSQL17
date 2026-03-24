@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Banner, GymActivity, PhotoAlbum
 import random
-
 # Create your views here.
 def home(request):
     banners = Banner.objects.filter(is_active=True)
@@ -15,4 +14,9 @@ def home(request):
 
 def photoalbums(request):
     photoalbums = PhotoAlbum.objects.filter(is_active=True)
-    return render(request,'photoalbums.html',{'photoalbums':photoalbums})
+    return render(request, 'managementsystem/photoalbums.html',{'photoalbums':photoalbums})
+
+def photoalbum_details(request, pk):
+    photoalbum = get_object_or_404(PhotoAlbum, pk=pk)
+    return render(request, 'managementsystem/photoalbums.html',{'photoalbum':photoalbum})
+

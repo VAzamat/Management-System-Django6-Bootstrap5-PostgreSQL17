@@ -70,36 +70,6 @@
 
 <main>
 
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-    <div class="carousel-indicators">
-      {% for banner in banners %}
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="{{forloop.counter0}}"  {% if forloop.first %}class="active"{% endif %} aria-current="true" aria-label="Slide {{forloop.counter}}"></button>
-     {% endfor %}
-    </div>
-    <div class="carousel-inner">
-      {% for banner in banners %}
-      <div class="carousel-item {% if forloop.first %}active{% endif %}"
-        style="background-image: url('{{banner.image.url}}');background-repeat: no-repeat;      background-position: center center; background-size: cover;">
-        <div class="container">
-          <div class="carousel-caption {% cycle 'text-start' '' 'text-end' %}">
-            <h1>{{banner.title}}</h1>
-            <p>{{banner.slogan}}</p>
-            <p><a class="btn btn-lg btn-primary" href="{{banner.link_url}}">{{banner.button_text}}</a></p>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
 
   <!-- Marketing messaging and featurettes
   ================================================== -->
@@ -108,27 +78,29 @@
   <div class="container marketing">
 
     <!-- Three columns of text below the carousel -->
-    {% for activity in gymactivities_random %}
+    {% for photoalbum in photoalbums %}
 
         {% if forloop.counter0|divisibleby:3 %}
         <div class="row mb-4">
         {% endif %}
 
+
+
         <div class="col-lg-4 text-center">
-                <img src="{{ activity.image.url }}"
-                     alt="{{ activity.title }}"
+          <a href="#">
+                <img src="{{ photoalbum.cover_image.url }}"
+                     alt="{{ photoalbum.title }}"
                      width="200" height="200"
                      class="rounded-circle"
                      style="object-fit: cover;" />
 
-            <h2 class="fw-normal mt-3">{{ activity.title }}</h2>
-            <p>{{ activity.slogan }}</p>
-            <p>
-                <a class="btn btn-secondary" href="#{{ activity.link_url }}">
-                    Подробнее &raquo;
-                </a>
-            </p>
+            <h2 class="fw-normal mt-3">{{ photoalbum.title }}</h2>
+          </a>
+            <p>{{ photoalbum.description }}</p>
+            <p>Создан: {{ photoalbum.created_at|date:"d.m.Y  H:i" }}</p>
+
         </div><!-- /.col-lg-4 -->
+
 
         {% if forloop.counter|divisibleby:3 or forloop.last %}
         </div><!-- /.row -->
@@ -137,28 +109,6 @@
     {% endfor %}
 
 
-    <!-- START THE FEATURETTES -->
-
-
-    {% for activity in gymactivities %}
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div id="{{ activity.link_url }}" class="col-md-7 {% if forloop.counter|divisibleby:2 %}order-md-2{% endif %}">
-        <h2 class="featurette-heading">{{ activity.subtitle }}</h2>
-        <p class="lead">
-        {{ activity.description }}
-        </p>
-      </div>
-      <div class="col-md-5 {% if forloop.counter|divisibleby:2 %}order-md-1{% endif %}">
-        <img src="{{ activity.image.url }}" alt="{{ activity.title }}" width="500"  />
-      </div>
-    </div>
-    {% endfor %}
-
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
 
   </div><!-- /.container -->
 
