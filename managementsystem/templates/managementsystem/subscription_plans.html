@@ -47,16 +47,16 @@ Gym Management System
     </div>
 
 
-    <h2 class="display-6 text-center mb-4">Compare plans</h2>
+    <h4 class="display-6 text-center mb-4">Таблица сравнения тарифных планов</h4>
 
     <div class="table-responsive">
       <table class="table text-center">
         <thead>
           <tr>
             <th style="width: 34%;"></th>
-            <th style="width: 22%;">Free</th>
-            <th style="width: 22%;">Pro</th>
-            <th style="width: 22%;">Enterprise</th>
+            {% for tarif in tarifs %}
+            <th style="width: 22%;">{{ tarif.name }}</th>
+            {% endfor %}
           </tr>
         </thead>
         <tbody>
@@ -64,7 +64,7 @@ Gym Management System
             <th scope="row" class="text-start">Public</th>
             <td> <i class="bi bi-x-circle text-danger me-2"> </td>
             <td> <i class="bi bi-check2 text-succes me-2"></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td> <i class="bi bi-check2 text-succes me-2"></td>
           </tr>
           <tr>
             <th scope="row" class="text-start">Private</th>
