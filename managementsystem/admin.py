@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Banner, GymActivity, PhotoAlbum, ImageGallery, SubscriptionPlan
+from .models import Banner, GymActivity, PhotoAlbum, ImageGallery, SubscriptionPlan, SubscriptionPlanFeature
 from unfold.admin import ModelAdmin
 
 #admin.site.register(Banner)
@@ -47,3 +47,6 @@ class SubscriptionPlanAdmin(ModelAdmin):
     list_display = ('name', 'price', 'is_active')
     list_filter = ('is_active',)
 
+@admin.register(SubscriptionPlanFeature)
+class SubscriptionPlanFeatureAdmin(ModelAdmin):
+    list_display = ('name',)

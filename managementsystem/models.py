@@ -213,12 +213,28 @@ class ImageGallery(models.Model):
 
     image_tag.short_description = 'Предпросмотр'
 
+class SubscriptionPlanFeature(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Название услуги")
+
+    class Meta:
+        verbose_name = "Услуга тарифного плана"
+        verbose_name_plural = "Услуги тарифного плана"
+
+    def __str__(self):
+        return self.name
+
 
 class SubscriptionPlan(models.Model):
     name = models.CharField(
         max_length=100,
         unique=True,
         verbose_name="Название тарифа"
+    )
+    features = models.ManyToManyField(
+        SubscriptionPlanFeature,
+        related_name="plans",
+        verbose_name="Включенные услуги",
+        blank=True
     )
     description = models.TextField(
         blank=True,
@@ -251,3 +267,4 @@ class SubscriptionPlan(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.price} руб.)"
+
