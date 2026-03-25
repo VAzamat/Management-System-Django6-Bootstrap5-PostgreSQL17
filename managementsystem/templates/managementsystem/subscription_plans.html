@@ -16,7 +16,7 @@ Gym Management System
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
       <h1 class="display-4 fw-normal">Тарифные планы</h1>
       <p class="fs-5 text-muted">
-      Выберите наиболее подходящий план занятий. Таблица сравнения тарифных планов указаны ниже.
+      Выберите наиболее подходящий план занятий. Таблица сравнения тарифных планов приведена ниже.
       </p>
     </div>
   </header>
@@ -28,16 +28,23 @@ Gym Management System
       {% for tarif in tarifs %}
 
       <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm ">
+        <div class="card mb-4 rounded-3 shadow-sm h-100">
           <div class="card-header py-3 {% if tarif.is_highlighted %}text-white bg-primary border-primary{% endif %}">
             <h4 class="my-0 fw-normal">{{tarif.name}}</h4>
           </div>
           <div class="card-body">
             <h3 class="card-title pricing-card-title"> {{tarif.price | floatformat:0}} руб. <small class="text-muted fw-light">   / {{tarif.duration_days}} дн.</small></h3>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>Гибкий график</li>
+              {% for feature in tarif.features.all %}
+              <li class="text-start">
+                <i class="bi bi-check-circle-fill text-success small me-2"></i> <span class="small">{{ feature.name }}</span>
+              </li>
+              {% endfor %}
+
             </ul>
-            <p>{{tarif.description}} </p>
+            <p style="text-align: justify;">{{tarif.description}} </p>
+          </div>
+          <div class="card-footer">
             <button type="button" class="w-100 btn btn-lg btn-outline-primary">Выбрать</button>
           </div>
         </div>
@@ -60,46 +67,20 @@ Gym Management System
           </tr>
         </thead>
         <tbody>
+          {% for tarif_feature in tarif_features %}
           <tr>
-            <th scope="row" class="text-start">Public</th>
-            <td> <i class="bi bi-x-circle text-danger me-2"> </td>
-            <td> <i class="bi bi-check2 text-succes me-2"></td>
-            <td> <i class="bi bi-check2 text-succes me-2"></td>
+            <th scope="row" class="text-start">{{tarif_feature.name}}</th>
+            {% for tarif in tarifs %}
+              {% if tarif_feature in  tarif.features.all %}
+                <td> <i class="bi bi-check2 text-succes me-2"></td>
+              {% else %}
+                <td> <i class="bi bi-x-circle text-danger me-2"> </td>
+             {% endif%}
+            {% endfor %}
           </tr>
-          <tr>
-            <th scope="row" class="text-start">Private</th>
-            <td></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          </tr>
+        {% endfor %}
         </tbody>
 
-        <tbody>
-          <tr>
-            <th scope="row" class="text-start">Permissions</th>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          </tr>
-          <tr>
-            <th scope="row" class="text-start">Sharing</th>
-            <td></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          </tr>
-          <tr>
-            <th scope="row" class="text-start">Unlimited members</th>
-            <td></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          </tr>
-          <tr>
-            <th scope="row" class="text-start">Extra security</th>
-            <td></td>
-            <td></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          </tr>
-        </tbody>
       </table>
     </div>
   </div>
