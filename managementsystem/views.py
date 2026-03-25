@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Banner, GymActivity, PhotoAlbum
+from .models import Banner, GymActivity, PhotoAlbum, SubscriptionPlan
 import random
 # Create your views here.
 def home(request):
@@ -21,3 +21,6 @@ def photoalbum_detail(request, pk):
     images=album.photos.filter(is_active=True).order_by('order', 'created_at')
     return render(request, 'managementsystem/photoalbum_detail.html',{'album':album,'images':images})
 
+def subscriptionplan(request):
+    subscriptionplan = SubscriptionPlan.objects.filter(is_active=True)
+    return render(request, 'managementsystem/subscription_plans.html',{'tarifs':subscriptionplan})
