@@ -1,168 +1,109 @@
-<!-- Обязательное подключение статических тегов django-->
-{% load static %}
+{% extends "base.html" %}
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Gym Management System</title>
 
-    
+{% block title %}
+Фотоальбом: {{ album.title }}
+{% endblock %}
 
-    
-
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-
+{% block customstyle %}
+    <!-- Наследуем всё из base.html -->
+    {{ block.super }}
+    <!-- Дополняем стили -->
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+        /* https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp */
+        * {
+          box-sizing: border-box;
         }
-      }
-/* https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp */
-* {
-  box-sizing: border-box;
-}
 
-/* Position the image container (needed to position the left and right arrows) */
-.slideshowContainer {
-  position: relative;
-}
+        /* Position the image container (needed to position the left and right arrows) */
+        .slideshowContainer {
+          position: relative;
+        }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
 
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
 
-/* Container for image text */
-.caption-slideshowContainer {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
+        /* Container for image text */
+        .caption-slideshowContainer {
+          text-align: center;
+          background-color: #222;
+          padding: 2px 16px;
+          color: white;
+        }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
 
-/* Eight columns side by side */
-.column {
-  float: left;
-  width: 12.5%;
-}
+        /* Eight columns side by side */
+        .column {
+          float: left;
+          width: 12.5%;
+        }
 
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.85;
-}
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.85;
+        }
 
-.active,
-.demo:hover {
-  opacity: 1;
-}
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
 
     </style>
-
     
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
-  </head>
-  <body>
-    
-<header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Studio360</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Ссылки</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Подробнее</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Поисковый запрос" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Поиск</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</header>
-
-<main>
+{% endblock %}
 
 
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
+{% block content %}
   <div class="container marketing">
 
     <div class="row">
@@ -202,16 +143,14 @@
 
   </div><!-- /.container -->
 
+{% endblock %}
 
-  <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-end"><a href="{% url 'managementsystem:photoalbums' %}">В фотогалерею</a></p>
-    <p>&copy; 2017–2026 Studio360, Inc. &middot; <a href="#">Обратная связь</a> &middot; <a href="#">Условия использования</a></p>
-  </footer>
-</main>
+{% block footerlink %}
+<a href="{% url 'managementsystem:photoalbums' %}">В фотогалерею</a>
+{% endblock %}
 
 
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+{% block scripts %}
 
   <script>
         let slideIndex = 1;
@@ -246,6 +185,21 @@
         }
 
   </script>>
-      
-  </body>
-</html>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
