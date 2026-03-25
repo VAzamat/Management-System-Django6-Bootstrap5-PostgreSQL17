@@ -1,19 +1,19 @@
 [
 {
     "model": "managementsystem.banner",
-    "pk": "0618a9e8-86e0-4096-8fdf-89bcfc76ccb7",
+    "pk": "2e7028d8-687e-4891-acaf-cc9fcbfaa647",
     "fields": {
-        "title": "Йога",
-        "slogan": "Приобретай душевный покой и умиротворение",
-        "button_text": "Присоединяйся к нам!",
-        "link_url": "register",
-        "image": "images/banners/001-training-yoga.jpg",
+        "title": "Интенсивные тренировки в группах",
+        "slogan": "Дай своему сердцу повод биться мощнее!",
+        "button_text": "Узнай подробнее",
+        "link_url": "activities",
+        "image": "images/banners/002-training-step-aerobic.jpg",
         "is_active": true
     }
 },
 {
     "model": "managementsystem.banner",
-    "pk": "247fb387-2ef5-4e08-b611-b61b9c084e7c",
+    "pk": "654ff464-f020-4636-89fa-3d1de1f6844f",
     "fields": {
         "title": "Зал силовых упражнений",
         "slogan": "Построй себя сам, закаляя характер и тело.",
@@ -25,32 +25,32 @@
 },
 {
     "model": "managementsystem.banner",
-    "pk": "4e5a7280-e3c0-4c80-be14-8caa08a9a9a4",
+    "pk": "dd6b977a-2fbf-461f-8fd4-c8667e8f4fba",
     "fields": {
-        "title": "Интенсивные тренировки в группах",
-        "slogan": "Дай своему сердцу повод биться мощнее!",
-        "button_text": "Узнай подробнее",
-        "link_url": "activities",
-        "image": "images/banners/002-training-step-aerobic.jpg",
+        "title": "Йога",
+        "slogan": "Приобретай душевный покой и умиротворение",
+        "button_text": "Присоединяйся к нам!",
+        "link_url": "register",
+        "image": "images/banners/001-training-yoga.jpg",
         "is_active": true
     }
 },
 {
     "model": "managementsystem.gymactivity",
-    "pk": "25769639-5c47-4082-9807-3e81a971fe87",
+    "pk": "073a05f6-8f6e-44e7-988f-a3ce8c1eed5e",
     "fields": {
-        "title": "Бассейн",
-        "slogan": "Сила океана для твоих личных рекордов.",
-        "subtitle": "Бассейн",
-        "description": "Плавание в олимпийском 50-метровом бассейне — это максимум свободы для ваших достижений. Длинные дорожки позволяют держать темп без частых разворотов, развивая выносливость и силу. Укрепите спину и сбросьте лишнее в кристально чистой воде!",
-        "image": "images/GymActivities/004-Swimmingpool.jpg",
-        "link_url": "swimming",
+        "title": "Танцы",
+        "slogan": "Раскрой свою истинную красоту в танце.",
+        "subtitle": "Координация движений и ритм.",
+        "description": "Бальные танцы — это совершенная координация движений и чистый драйв на паркете. Почувствуй ритм каждой клеткой, обрети грацию и уверенность. Наполни жизнь музыкой и страстью — начни танцевать прямо сейчас!",
+        "image": "images/GymActivities/002-Dance.jpg",
+        "link_url": "dance",
         "is_active": true
     }
 },
 {
     "model": "managementsystem.gymactivity",
-    "pk": "51eea0fc-5a9a-4eaf-845b-459eec14c86c",
+    "pk": "30557f30-d96d-4e9a-99db-81e10ed19a1f",
     "fields": {
         "title": "Единоборства",
         "slogan": "Используй энергию противника против него самого.",
@@ -63,7 +63,7 @@
 },
 {
     "model": "managementsystem.gymactivity",
-    "pk": "94b2a3af-562d-4193-b79b-f895467038a1",
+    "pk": "38b58954-ccd9-47dd-b073-9a386c40d80f",
     "fields": {
         "title": "Силовые упражнения",
         "slogan": "Построй себя сам, закаляя характер и тело.",
@@ -76,7 +76,7 @@
 },
 {
     "model": "managementsystem.gymactivity",
-    "pk": "dde31b4a-a0ed-49a1-9b5d-7a12920c213d",
+    "pk": "7028b661-a235-49d5-bb85-8ae71d35ee6f",
     "fields": {
         "title": "Кардиотренировки",
         "slogan": "Дай своему сердцу повод биться мощнее.",
@@ -89,14 +89,14 @@
 },
 {
     "model": "managementsystem.gymactivity",
-    "pk": "f7775125-9970-4885-ad9a-edccae8f038d",
+    "pk": "aee90c65-48f9-4308-8b7a-ba16d4ee8122",
     "fields": {
-        "title": "Танцы",
-        "slogan": "Раскрой свою истинную красоту в танце.",
-        "subtitle": "Координация движений и ритм.",
-        "description": "Бальные танцы — это совершенная координация движений и чистый драйв на паркете. Почувствуй ритм каждой клеткой, обрети грацию и уверенность. Наполни жизнь музыкой и страстью — начни танцевать прямо сейчас!",
-        "image": "images/GymActivities/002-Dance.jpg",
-        "link_url": "dance",
+        "title": "Бассейн",
+        "slogan": "Сила океана для твоих личных рекордов.",
+        "subtitle": "Бассейн",
+        "description": "Плавание в олимпийском 50-метровом бассейне — это максимум свободы для ваших достижений. Длинные дорожки позволяют держать темп без частых разворотов, развивая выносливость и силу. Укрепите спину и сбросьте лишнее в кристально чистой воде!",
+        "image": "images/GymActivities/004-Swimmingpool.jpg",
+        "link_url": "swimming",
         "is_active": true
     }
 },
@@ -107,7 +107,7 @@
         "title": "Наши работники",
         "cover_image": "images/PhotoAlbumCovers/002_cover_collage_team.jpg",
         "description": "Наша команда это эксперты с многолетним опытом, влюбленные в свое дело. Мы объединили лучших мастеров, чтобы гарантировать вам безупречное качество, индивидуальный подход и соблюдение сроков. Ваше доверие — наш главный стимул к совершенству!",
-        "created_at": "2026-03-23T21:58:00.698Z",
+        "created_at": "2026-03-24T23:09:33.814Z",
         "is_active": true
     }
 },
@@ -118,97 +118,27 @@
         "title": "Природа",
         "cover_image": "images/PhotoAlbumCovers/001_collage_nature.jpg",
         "description": "Прикоснитесь к магии первозданной природы: от заснеженных горных пиков и таинственного леса до танцующего в небе северного сияния. Альбом о тишине, величии природы и моментах, когда захватывает дух. Настоящая сказка в каждом кадре.",
-        "created_at": "2026-03-23T21:14:57.698Z",
+        "created_at": "2026-03-24T23:09:33.814Z",
         "is_active": true
     }
 },
 {
     "model": "managementsystem.imagegallery",
-    "pk": "489eea29-f6a3-42fa-a9b2-956e1c58b989",
+    "pk": "08e4af5a-3c1d-44ef-a426-5ff108c081b4",
     "fields": {
         "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
-        "title": "Горное озеро",
-        "image": "images/ImageGallery/004_nature_mountains.jpg",
-        "category": "горы",
-        "description": "Горное озеро — природный бриллиант в оправе из древних скал. Чистота воды, свежесть воздуха и покой, который можно найти только здесь. Идеальный пейзаж для тех, кто ищет вдохновение в тишине.",
-        "order": 1,
-        "created_at": "2026-03-23T21:14:57.703Z",
-        "is_active": true
-    }
-},
-{
-    "model": "managementsystem.imagegallery",
-    "pk": "64378a40-0111-4491-9545-f7f42fb37b0d",
-    "fields": {
-        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
-        "title": "Дорога в лес",
-        "image": "images/ImageGallery/002_nature_forest.jpg",
-        "category": "Лес",
-        "description": "Мост, ведущий в сердце дикого леса. Граница между суетой и спокойствием природы. Кажется, за этим поворотом начинается настоящая сказка. Идеальное место, чтобы оставить лишние мысли и просто идти вперед под шепот листвы.",
+        "title": "Уютная бухта 2",
+        "image": "images/ImageGallery/001_nature_5terre.jpg",
+        "category": "Море",
+        "description": "Вид с террасы на уютную бухту: разноцветные крыши домов и лодки на зеркальной глади. Идеальное утро в прибрежном раю, наполненное криком чаек и ароматом кофе. Здесь каждый уголок дышит спокойствием и летним теплом.",
         "order": 2,
-        "created_at": "2026-03-23T21:14:57.703Z",
+        "created_at": "2026-03-24T23:09:33.827Z",
         "is_active": true
     }
 },
 {
     "model": "managementsystem.imagegallery",
-    "pk": "660e5a1d-3ae3-4399-bdf2-15a12acbddcf",
-    "fields": {
-        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
-        "title": "Anna Doe",
-        "image": "images/ImageGallery/001_team_AnnaDoe.jpg",
-        "category": "Работники",
-        "description": "Anna Doe — ведущий дизайнер нашей команды. Обладает тонким чувством стиля и уникальным взглядом на пространство. Анна создает эстетичные и функциональные интерьеры тренажерных залов, в которых продумана каждая деталь. Её проекты — это гармония уюта и современных трендов.",
-        "order": 0,
-        "created_at": "2026-03-23T22:00:01.950Z",
-        "is_active": true
-    }
-},
-{
-    "model": "managementsystem.imagegallery",
-    "pk": "668f6b46-51dc-4a64-bfb7-43e16b5bac3f",
-    "fields": {
-        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
-        "title": "Северное сияние",
-        "image": "images/ImageGallery/003_nature_northern_lights.jpg",
-        "category": "полярные сияния",
-        "description": "Яркие всполохи северного сияния превращают ночь в сказку, отражаясь в снегах и напоминая о невероятной красоте нашей планеты. Красота, которую невозможно забыть.",
-        "order": 1,
-        "created_at": "2026-03-23T21:14:57.703Z",
-        "is_active": true
-    }
-},
-{
-    "model": "managementsystem.imagegallery",
-    "pk": "83254eb5-9604-4bdf-91e2-cacf7ec72f44",
-    "fields": {
-        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
-        "title": "Katrin King",
-        "image": "images/ImageGallery/004_team_KatrinKing.jpg",
-        "category": "Работники",
-        "description": "Katrin King — мудрая душа и совладелица нашей сети. Её жизненный опыт и верность традициям лежат в основе нашего гостеприимства. Катрин следит за тем, чтобы в каждом клубе сохранялась уютная атмосфера и семейные ценности, ставшие фундаментом бизнеса.",
-        "order": 2,
-        "created_at": "2026-03-23T22:03:52.429Z",
-        "is_active": true
-    }
-},
-{
-    "model": "managementsystem.imagegallery",
-    "pk": "9f73b928-1681-4e3c-87e4-ac58b0b43e9a",
-    "fields": {
-        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
-        "title": "Eva Berg",
-        "image": "images/ImageGallery/005_team_EvaBerg.jpg",
-        "category": "Работники",
-        "description": "Eva Berg — наш легендарный ведущий тренер, чьё присутствие ощущается в каждом результате, даже если её нет в зале. Она — дух нашей дисциплины и автор уникальных программ. Ева учит преодолевать границы возможного и находить гармонию в движении.",
-        "order": 5,
-        "created_at": "2026-03-23T22:05:03.991Z",
-        "is_active": true
-    }
-},
-{
-    "model": "managementsystem.imagegallery",
-    "pk": "bcf14386-2264-41ab-9f06-ef9c07c5f60b",
+    "pk": "0c21e1b2-72c6-4597-b357-7501798ed263",
     "fields": {
         "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
         "title": "John Doe",
@@ -216,13 +146,27 @@
         "category": "Работники",
         "description": "John Doe — идейный вдохновитель и создатель нашей сети фитнес-центров. Сделал миссией своей жизни развитие доступного и профессионального спорта. Благодаря его опыту и видению, наши клубы стали эталоном качества, комфорта и здорового образа жизни.",
         "order": 2,
-        "created_at": "2026-03-23T22:02:33.758Z",
+        "created_at": "2026-03-24T23:09:33.827Z",
         "is_active": true
     }
 },
 {
     "model": "managementsystem.imagegallery",
-    "pk": "e8c1ebd3-7975-4fdc-ab2c-4fa3bab514cf",
+    "pk": "21eaec97-d052-444e-af33-2d3341b96230",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Горное озеро 2",
+        "image": "images/ImageGallery/004_nature_mountains.jpg",
+        "category": "горы",
+        "description": "Горное озеро — природный бриллиант в оправе из древних скал. Чистота воды, свежесть воздуха и покой, который можно найти только здесь. Идеальный пейзаж для тех, кто ищет вдохновение в тишине.",
+        "order": 4,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "36b97aa2-5d86-4a38-b17c-f83c552f8e35",
     "fields": {
         "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
         "title": "Mike Ross",
@@ -230,27 +174,13 @@
         "category": "Работники",
         "description": "Mike Ross — мастер динамичных кадров и безупречной логистики. Как организатор и фотограф, он видит спорт изнутри: ловит драйв соревнований и создаёт события, продуманные до мелочей. С Майком каждое мероприятие превращается в яркую историю побед.",
         "order": 1,
-        "created_at": "2026-03-23T22:01:26.602Z",
+        "created_at": "2026-03-24T23:09:33.827Z",
         "is_active": true
     }
 },
 {
     "model": "managementsystem.imagegallery",
-    "pk": "f1397bb1-7fdc-4144-9b08-3f129e5bdf13",
-    "fields": {
-        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
-        "title": "Уютная бухта",
-        "image": "images/ImageGallery/001_nature_5terre.jpg",
-        "category": "Море",
-        "description": "Вид с террасы на уютную бухту: разноцветные крыши домов и лодки на зеркальной глади. Идеальное утро в прибрежном раю, наполненное криком чаек и ароматом кофе. Здесь каждый уголок дышит спокойствием и летним теплом.",
-        "order": 3,
-        "created_at": "2026-03-23T21:14:57.703Z",
-        "is_active": true
-    }
-},
-{
-    "model": "managementsystem.imagegallery",
-    "pk": "f3033c18-959e-4dc5-9651-47fb4c0c66db",
+    "pk": "59359d92-db08-4ca8-b0de-74addb69d905",
     "fields": {
         "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
         "title": "Снежные вершины",
@@ -258,7 +188,253 @@
         "category": "горы",
         "description": "Величественные горные пики, укрытые сияющим снежным покровом, безмолвно застыли под холодным зимним солнцем. Атмосфера первозданной тишины и кристальной чистоты природы, где небо встречается с землей в бесконечном танце льда и света.",
         "order": 0,
-        "created_at": "2026-03-23T21:14:57.703Z",
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "68c45f5c-1861-46cd-944f-403696f765ec",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Уютная бухта 2",
+        "image": "images/ImageGallery/001_nature_5terre.jpg",
+        "category": "Море",
+        "description": "Вид с террасы на уютную бухту: разноцветные крыши домов и лодки на зеркальной глади. Идеальное утро в прибрежном раю, наполненное криком чаек и ароматом кофе. Здесь каждый уголок дышит спокойствием и летним теплом.",
+        "order": 11,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "6aca4727-522f-4abd-93ba-97431c56ceb6",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Дорога в лес 3",
+        "image": "images/ImageGallery/002_nature_forest.jpg",
+        "category": "Лес",
+        "description": "Мост, ведущий в сердце дикого леса. Граница между суетой и спокойствием природы. Кажется, за этим поворотом начинается настоящая сказка. Идеальное место, чтобы оставить лишние мысли и просто идти вперед под шепот листвы.",
+        "order": 9,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "73372817-23e6-4099-a919-d5c4347d3c65",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Дорога в лес 3",
+        "image": "images/ImageGallery/002_nature_forest.jpg",
+        "category": "Лес",
+        "description": "Мост, ведущий в сердце дикого леса. Граница между суетой и спокойствием природы. Кажется, за этим поворотом начинается настоящая сказка. Идеальное место, чтобы оставить лишние мысли и просто идти вперед под шепот листвы.",
+        "order": 15,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "7b8b51be-3073-4624-9df6-96d7f5aa441a",
+    "fields": {
+        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+        "title": "Anna Doe",
+        "image": "images/ImageGallery/001_team_AnnaDoe.jpg",
+        "category": "Работники",
+        "description": "Anna Doe — ведущий дизайнер нашей команды. Обладает тонким чувством стиля и уникальным взглядом на пространство. Анна создает эстетичные и функциональные интерьеры тренажерных залов, в которых продумана каждая деталь. Её проекты — это гармония уюта и современных трендов.",
+        "order": 0,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "85f904c7-2e5c-4fe6-bc3e-54c8239ca8b5",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Северное сияние 2",
+        "image": "images/ImageGallery/003_nature_northern_lights.jpg",
+        "category": "полярные сияния",
+        "description": "Яркие всполохи северного сияния превращают ночь в сказку, отражаясь в снегах и напоминая о невероятной красоте нашей планеты. Красота, которую невозможно забыть.",
+        "order": 6,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "962ac6f5-87bc-44ce-bd38-ed9402260d33",
+    "fields": {
+        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+        "title": "Katrin King",
+        "image": "images/ImageGallery/004_team_KatrinKing.jpg",
+        "category": "Работники",
+        "description": "Katrin King — мудрая душа и совладелица нашей сети. Её жизненный опыт и верность традициям лежат в основе нашего гостеприимства. Катрин следит за тем, чтобы в каждом клубе сохранялась уютная атмосфера и семейные ценности, ставшие фундаментом бизнеса.",
+        "order": 2,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "9a81de9c-31e5-43a8-85e2-d5dbd20e5eef",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Снежные вершины 3",
+        "image": "images/ImageGallery/005_nature_snow.jpg",
+        "category": "горы",
+        "description": "Величественные горные пики, укрытые сияющим снежным покровом, безмолвно застыли под холодным зимним солнцем. Атмосфера первозданной тишины и кристальной чистоты природы, где небо встречается с землей в бесконечном танце льда и света.",
+        "order": 8,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "9f88abca-4dc8-48c1-a6f3-df94f40bf6c5",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Снежные вершины 2",
+        "image": "images/ImageGallery/005_nature_snow.jpg",
+        "category": "горы",
+        "description": "Величественные горные пики, укрытые сияющим снежным покровом, безмолвно застыли под холодным зимним солнцем. Атмосфера первозданной тишины и кристальной чистоты природы, где небо встречается с землей в бесконечном танце льда и света.",
+        "order": 7,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "ae3b21cc-ffa3-4c09-ae27-b4e22dfb20ba",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Уютная бухта",
+        "image": "images/ImageGallery/001_nature_5terre.jpg",
+        "category": "Море",
+        "description": "Вид с террасы на уютную бухту: разноцветные крыши домов и лодки на зеркальной глади. Идеальное утро в прибрежном раю, наполненное криком чаек и ароматом кофе. Здесь каждый уголок дышит спокойствием и летним теплом.",
+        "order": 3,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "b0e93cf2-a77c-40e9-81c4-d22d12abd19e",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Горное озеро 3",
+        "image": "images/ImageGallery/004_nature_mountains.jpg",
+        "category": "горы",
+        "description": "Горное озеро — природный бриллиант в оправе из древних скал. Чистота воды, свежесть воздуха и покой, который можно найти только здесь. Идеальный пейзаж для тех, кто ищет вдохновение в тишине.",
+        "order": 14,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "bd7b0dd3-d112-4ae2-89a0-42704c2b2262",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Горное озеро",
+        "image": "images/ImageGallery/004_nature_mountains.jpg",
+        "category": "горы",
+        "description": "Горное озеро — природный бриллиант в оправе из древних скал. Чистота воды, свежесть воздуха и покой, который можно найти только здесь. Идеальный пейзаж для тех, кто ищет вдохновение в тишине.",
+        "order": 1,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "d5eb1b0a-cdd8-4dda-99d4-8fdcc2b5e947",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Северное сияние",
+        "image": "images/ImageGallery/003_nature_northern_lights.jpg",
+        "category": "полярные сияния",
+        "description": "Яркие всполохи северного сияния превращают ночь в сказку, отражаясь в снегах и напоминая о невероятной красоте нашей планеты. Красота, которую невозможно забыть.",
+        "order": 1,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "d955068b-1df2-4f1f-aaa9-98117d006f0b",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Северное сияние 3",
+        "image": "images/ImageGallery/003_nature_northern_lights.jpg",
+        "category": "полярные сияния",
+        "description": "Яркие всполохи северного сияния превращают ночь в сказку, отражаясь в снегах и напоминая о невероятной красоте нашей планеты. Красота, которую невозможно забыть.",
+        "order": 16,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "dfd32e4d-f0ac-431e-973e-aef1a3d0247d",
+    "fields": {
+        "album": "da5044d3-13e0-4e51-8ccc-cea9a11ce323",
+        "title": "Дорога в лес",
+        "image": "images/ImageGallery/002_nature_forest.jpg",
+        "category": "Лес",
+        "description": "Мост, ведущий в сердце дикого леса. Граница между суетой и спокойствием природы. Кажется, за этим поворотом начинается настоящая сказка. Идеальное место, чтобы оставить лишние мысли и просто идти вперед под шепот листвы.",
+        "order": 2,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.imagegallery",
+    "pk": "e0c8b959-bb4a-48f5-95fa-f89c80b9ddaf",
+    "fields": {
+        "album": "aa34ec6e-3e8d-453d-bfdc-11c2524827f7",
+        "title": "Eva Berg",
+        "image": "images/ImageGallery/005_team_EvaBerg.jpg",
+        "category": "Работники",
+        "description": "Eva Berg — наш легендарный ведущий тренер, чьё присутствие ощущается в каждом результате, даже если её нет в зале. Она — дух нашей дисциплины и автор уникальных программ. Ева учит преодолевать границы возможного и находить гармонию в движении.",
+        "order": 5,
+        "created_at": "2026-03-24T23:09:33.827Z",
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.subscriptionplan",
+    "pk": 7,
+    "fields": {
+        "name": "Базовый",
+        "description": "Идеальный старт: 2 часа в зале 2 раза в неделю, раздевалка, душевая, сауна и хамам. Эффективные тренировки в комфортных условиях по лучшей цене. Гибкий график и готовый план спортивного питания для вас! Месячный абонемент.",
+        "price": "8000.00",
+        "duration_days": 30,
+        "is_highlighted": false,
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.subscriptionplan",
+    "pk": 8,
+    "fields": {
+        "name": "Основной",
+        "description": "Тренировки 3 раза в неделю без ограничений по времени. Включены услуги тренера, индивидуальный план тренировок и питание. К вашим услугам — раздевалка, душевая, сауна и хамам. Комфорт и результат в одном пакете! Абонемент на 3 месяца по выгодной цене.",
+        "price": "34000.00",
+        "duration_days": 90,
+        "is_highlighted": true,
+        "is_active": true
+    }
+},
+{
+    "model": "managementsystem.subscriptionplan",
+    "pk": 9,
+    "fields": {
+        "name": "Продвинутый",
+        "description": "Тренировки в любые дни без ограничений по времени. Включены  персональный индивидуальны план тренировок и отслеживание прогресса. К вашим услугам — раздевалка, душевая, сауна и хамам. Максимальная свобода для достижения ваших целей! Абонемент на 6 месяцев.",
+        "price": "70000.00",
+        "duration_days": 180,
+        "is_highlighted": true,
         "is_active": true
     }
 }

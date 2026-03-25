@@ -107,11 +107,12 @@
   <div class="container marketing">
 
     <div class="row">
-        <div class="col-lg-12 text-center">
+        <div class="col-12 col-lg-8 text-center">
             <h2 class="fw-normal mt-3">{{ album.title }}</h2>
         </div>
     </div>
-            <div class="slideshowContainer">
+      <div class="justify-content-center col-12">
+            <div class="slideshowContainer  col-lg-8">
                 <!-- Full-width images with number text -->
                     {% for image in images %}
                     <div class="mySlides">
@@ -131,12 +132,13 @@
                 <!-- Thumbnail images -->
                 <div class="row">
                   {% for image in images %}
-                    <div class="column col-lg-12">
-                      <img class="demo cursor" src="{{ image.image.url }}" style="width:100%" onclick="currentSlide({{forloop.counter}})" alt="{{ image.title }}">
+                    <div class="column col-12 col-lg-8">
+                      <img class="demo cursor" src="{{ image.image.url }}" style="width:100%" onclick="currentSlide({{forloop.counter}})" alt="{{ image.title }} {{ image.description }}">
                     </div>
                   {% endfor %}
                 </div>
             </div>
+        </div>
 
 
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Banner, GymActivity, PhotoAlbum, ImageGallery
+from .models import Banner, GymActivity, PhotoAlbum, ImageGallery, SubscriptionPlan
 from unfold.admin import ModelAdmin
 
 #admin.site.register(Banner)
@@ -41,3 +41,9 @@ class ImageGalleryAdmin(ModelAdmin):
     @admin.display(description='Дата загрузки', ordering='created_at')
     def formatted_created_at(self, obj):
         return obj.created_at.strftime("%d.%m.%Y %H:%M")
+
+@admin.register(SubscriptionPlan)
+class SubscriptionPlanAdmin(ModelAdmin):
+    list_display = ('name', 'price', 'is_active')
+    list_filter = ('is_active',)
+
